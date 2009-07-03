@@ -1,0 +1,2 @@
+# finds needle in recursive directory search and returns filenames 
+grep -l -r -m 1 Needle *

@@ -1,0 +1,3 @@
+mysqldump < mysqldump options> | gzip > outputfile.sql.gz
+
+gunzip < outputfile.sql.gz | mysql < mysql options> 

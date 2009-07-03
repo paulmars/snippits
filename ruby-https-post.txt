@@ -1,0 +1,11 @@
+require 'net/https'
+@http = Net::HTTP.new(HOST, 443)
+@http.use_ssl = true
+data = "USERID=xxx&PASSWORD=xxx&&submit=submit"
+@headers = {
+  'Cookie' => get_cookies(),
+  'Referer' => 'https://'+HOST+PATH,
+  'Content-Type' => 'application/x-www-form-urlencoded',
+  'User-Agent' => USERAGENT
+}
+resp, data = @http.post2(PATH, data, @header)

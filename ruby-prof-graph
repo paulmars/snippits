@@ -1,0 +1,1 @@
+time ruby-prof -p graph_html RUBYFILE > graph.html
